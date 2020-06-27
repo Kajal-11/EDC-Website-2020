@@ -17,8 +17,6 @@
     <!--<meta property="og:image:width" content="2000" />
 		<meta property="og:image:height" content="1338" /> -->
 
-    <link rel='dns-prefetch' href='http://s.w.org/' />
-
     <link rel='stylesheet' id='layerslider-css'             href="{% static 'home/css/layerslider.css' %}"              type='text/css' media='all' />
     <link rel='stylesheet' id='wp-block-library-css'        href="{% static 'home/css/block-library/style.min.css' %}"  type='text/css' media='all' />
     <link rel='stylesheet' id='wc-block-style-css'          href="{% static 'home/css/blocks/style.css' %}"             type='text/css' media='all'/>
@@ -763,11 +761,25 @@
 
         </style>
     </noscript>
-    <!-- head -->
+
+    <style>
+        .container{
+            width:  100vw !important;
+            border: 0px !important;
+            margin: 0px !important;
+            padding: 0px !important;
+        }
+        
+        .vc_row{
+            max-width: 100vw;
+        }
+    </style>
+
+    <!-- head block -->
     {% block head %}{% endblock head %}
 
 </head>
-{%block bodytag%}{%endblock bodytag%}
+<body {% block bodytag %}{% endblock bodytag %}>
     <!-- Pre Loader-->
     <div class="se-pre-con">
         <div class="rotating-plane"></div>
@@ -783,7 +795,7 @@
 
             <!-- Main menu container -->
             <div class="header-bottom">
-                <div class="container">
+                <div class="">
                     <div class="hlogo">
                         <div class="hlogoinner">
                             <a href="">
@@ -921,7 +933,7 @@
             <!-- Top bar -->
             <!-- Main menu container -->
 
-            <div class="container">
+            <div class="">
 
                 <div class="hlogo">
                     <div class="hlogoinner">
@@ -1067,11 +1079,11 @@
 
 
         <!-- Body -->
-        {% block 'body' %}{% endblock 'body' %}
+        {% block body %}{% endblock body %}
         <!--Footer-->
         <footer>
             <div class="main_footer footer_fourcolumns">
-                <div class="container">
+                <div class="">
                     <div class="footer_column">
                         <div class="fc_inner">
                             <div>
@@ -1205,7 +1217,7 @@
 
 
             <div class="footer_bottom">
-                <div class="container">
+                <div class="">
                     <div class="fb_text" style="color: grey !important;">
                         <img src="{% static 'home/images/copyright.png' %}" height="15px" width="15px">
                         <span style="font-size: 15px"> 2020-21 All Rights Reserved. Designed by <a href=""> EDC-TIET</a></span>
