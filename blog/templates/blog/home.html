@@ -1,0 +1,81 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block body %}
+        <!-- page -->
+    {% for var in post %}
+                
+        <div class="page-title-wrap" style="background-colour:{% static 'home/images/patrick-tomasso-71909.jpg' %}" >
+            <div class="page-title-bg rest-enable-parallax"></div>
+            <div class="page-title-tint"></div>
+            <div class="container header-flex header-enable-parallax">
+                                            <h1>
+                            blogs					           </h1>
+                                                                    <h4></h4>
+                
+                                    </div>
+        </div>
+
+        
+                                                    
+    <div class="main-content ">
+    <div class="blog  blog-standardfull">
+
+    <div class="container" >
+
+    <div class="row" >
+        <div class="column">
+
+
+    <div class="blog_item_wrapper effect-5  col-12 " style="display: block;">
+        <div class="grid-sizer"></div>
+                                            <div id="post-142" class=" blogs-style1 blogs-featured blogs-style2 spcard post-142 post type-post status-publish format-standard has-post-thumbnail hentry category-classics category-natu category-retro tag-machine-motion tag-photog tag-prints-3d">
+    <a href="../../../2013/05/04/eget-ultrice-mauris-rhoncus-non/index.html" class="spvideolink"><i class="fas fa-play" aria-hidden="true"></i></a>
+    <a href="../../../2013/05/04/eget-ultrice-mauris-rhoncus-non/index.html" class="spaudiolink"><i class="fas fa-microphone" aria-hidden="true"></i></a>
+
+    <div class="spwrapper cat_color__background_color" >
+
+    <div class="spbgimg blog-roll-i post142" >
+                                    <img alt="Eget ultrices mauris rhoncus non" title="Eget ultrices mauris rhoncus non" height="1336" width="2000" src="{% static 'home/images/brad-neathery-248309-500x354.jpg' %}" />
+            </div>
+
+
+    <div class="spdata">
+    <div class="spcontent">
+    <span class="spauthor">
+        <a href="../../../author/admin/index.html">
+            <img src="{% static 'home/images/logo-big-vector-100x100.jpg' %}" width="20" height="20" alt="Skywarrior" class="avatar avatar-20 wp-user-avatar wp-user-avatar-20 alignnone photo" />{{ var.author }}</a>
+    </span>
+
+    <div class="spdate">
+        <i class="far fa-clock" aria-hidden="true"></i> DATE			</div>
+
+    <h1 class="sptitle">
+        <a rel="bookmark" href="../../../2013/05/04/eget-ultrice-mauris-rhoncus-non/blog1.html">{{ var.title }}</a>
+    </h1>
+                <p class="sptext">blog text 1&hellip;</p>
+
+    <a href="{% url 'var-detail' var.id %}">Read more</a>
+    </div>
+    </div>
+
+    <i class="fas fa-quote-left" aria-hidden="true"></i>
+
+    </div>
+    </div>									<div id="post-141" class=" blogs-style1 blogs-featured blogs-style2 spcard post-141 post type-post status-publish format-standard has-post-thumbnail hentry category-art category-blog category-city-life tag-art tag-country tag-natur tag-photo tag-photog">
+    <a href="../../../2013/05/04/vix-at-eros-intellegat-sea-no-facer/index.html" class="spvideolink"><i class="fas fa-play" aria-hidden="true"></i></a>
+    <a href="../../../2013/05/04/vix-at-eros-intellegat-sea-no-facer/index.html" class="spaudiolink"><i class="fas fa-microphone" aria-hidden="true"></i></a>
+
+            
+        <div class="clear"></div>
+
+    </div><!-- /.span8 -->
+
+    </div>
+    </div><!-- /row -->
+
+    </div><!-- /container -->
+
+    </div><!-- /containerblog -->
+    </div> <!-- content -->
+    {% endfor %}
+{% endblock body %}
