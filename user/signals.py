@@ -6,4 +6,6 @@ from .models import Profile
 
 @receiver(post_save, sender=User)
 def create_profile(sender, instance, created, **kwargs):
-    instance.profile.save()
+    if not instance.is_superuser:
+        instance.profile.save()
+
