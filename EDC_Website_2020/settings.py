@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'startupEcosystem.apps.StartupecosystemConfig',
+    'investors.apps.InvestorsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,8 +42,10 @@ INSTALLED_APPS = [
     'event.apps.EventConfig',
     'home.apps.HomeConfig',
     'internshipPortal.apps.InternshipportalConfig',
+    'startupEcosystem.apps.StartupecosystemConfig',
     'user.apps.UserConfig',
     'crispy_forms',
+    'phonenumber_field',
 ]
 
 MIDDLEWARE = [
@@ -120,8 +122,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.0/howto/static-files/
-
 STATIC_URL = '/static/'
+
+AUTH_USER_MODEL = "user.User"
