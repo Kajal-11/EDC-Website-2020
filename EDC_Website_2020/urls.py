@@ -24,6 +24,7 @@ urlpatterns = [
     path('',include('user.urls')),
     path('', include('blog.urls')),
     path('',include('event.urls')),
+    path('', include('startup.urls')),
     path('', include('internshipPortal.urls')),
     path('', include('investors.urls')),
     path('terms-and-conditions/',include('startupEcosystem.urls')),

@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'internshipPortal.apps.InternshipportalConfig',
     'investors.apps.InvestorsConfig',
     'startupEcosystem.apps.StartupecosystemConfig',
+    'startup.apps.StartupConfig',
     'user.apps.UserConfig',
     'crispy_forms',
     'gsheets',
