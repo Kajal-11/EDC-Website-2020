@@ -52,6 +52,7 @@ class StartupProfile(models.Model):
     field_of_work = models.CharField(max_length=50)
     website = models.URLField(default='', null=True, blank=True)
     startup_logo = models.ImageField(default='download.png', upload_to='startup/')
+    to_publish = models.BooleanField(default=True)
 
     def __str__(self):
         return self.user.email
