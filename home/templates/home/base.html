@@ -864,14 +864,14 @@
     {% block head %}{% endblock head %}
 
 <style>
-    .main-wrapper, footer, #main{
+    .main-wrapper, #main{
         display: none;
     }
 
     #main{
         width: 100vw; 
         height: 100vh; 
-        background-image: linear-gradient(black, #0e3878);;
+        background-image: linear-gradient(black, #0e3878);
     }
 
 </style>
@@ -886,7 +886,7 @@
 
 
     <!-- Launch Timer -->
-    <div id="main">
+    <!-- <div id="main">
         <style>
             :root {
                 --light_col: #FEE715FF;
@@ -1101,9 +1101,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="main-wrapper">
+    <!-- <div class="main-wrapper">
         {% if messages %}
             <div style="background: black; height:80px; width: 100%"></div>
             <ul class="messages" style="background: #32a852; width: 100%; color: rgb(255, 255, 255); text-align: center; margin: 0px; padding: 10px;">
@@ -1111,7 +1111,7 @@
                     <h1 style="font-weight: 600; font-size: 25px; margin: 0px;">{{ message }}</h1>
                 {% endfor %}
             </ul>
-        {% endif %}
+        {% endif %} -->
 
         <!-- NavBar -->
         <header class="right-aligned-menu fullwidth page_header regular-header">
