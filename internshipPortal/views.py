@@ -8,13 +8,30 @@ from django.utils.decorators import method_decorator
 from django.views.generic import DetailView, UpdateView, DeleteView
 from .forms import InternshipForm, ApplicationForm, VenCapForm
 from .models import Internship, InternshipApplication, VentureCapitalist
+from django.db.models import Q
 import datetime, xlwt
 
 
 def Internships(request):
+    
+    internship = Internship.objects.all()
+
+    query = request.GET.get("query")
+    if query:
+        internship = internship.filter(
+            # Q(startup__icontains=query) |
+            Q(field_of_internship__icontains=query) |
+            Q(duration__icontains=query) |
+            Q(about=query) |
+            Q(location=query) |
+            Q(stipend=query) |
+            Q(skills_required=query) |
+            Q(perks=query) 
+            ).distinct()
     context = {
-        'internships': Internship.objects.all().order_by('-apply_by')
+        'internships': internship.order_by('-apply_by')
     }
+
     return render(request, 'internshipPortal/Internship.html', context)
 
 def MyInternships(request):
