@@ -85,6 +85,12 @@
 		.container{
 			max-width: 98vw;
 		}
+		@media only screen and (max-width: 768px){
+			.col-12{
+				padding-left: 0 !important;
+				padding-right: 0 !important;
+			}
+		}
 	</style>
 
 {% endblock head %}
@@ -319,7 +325,7 @@
 
 
 <br><br>			
-<div class="pagination">
+<div class="pagination" style="text-align: center;">
 	<ul>
 		<li class='active'><a href=''>1</a></li>
 		<li><a href="{% url 'etalks2' %}" class='inactive'>2</a></li>

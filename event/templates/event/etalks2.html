@@ -86,6 +86,13 @@
     .container{
         max-width: 98vw;
     }
+    
+    @media only screen and (max-width: 768px){
+        .col-12{
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+    }
 </style>
 {% endblock head %}
 
@@ -274,7 +281,7 @@
 		<i class="fas fa-quote-left" aria-hidden="true"></i>
 
 	</div>
-        <div class="pagination">
+        <div class="pagination" style="text-align: center;">
             <ul>
                 <li>
                     <a class='page-selector' href="{% url 'etalks' %}">
